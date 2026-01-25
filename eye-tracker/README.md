@@ -127,6 +127,8 @@ MIT License - feel free to use in personal and commercial projects.
 
 Created by [Rebecca Rae Barton](https://rebeccaraebarton.com)
 
+**Live demo:** [rebeccaraebarton.com/work/watching-you-cursor](https://rebeccaraebarton.com/work/watching-you-cursor)
+
 ---
 
 **Found a bug?** [Open an issue](../../issues)

@@ -23,3 +23,5 @@ All components are MIT licensed unless otherwise noted.
 ## Author
 
 [Rebecca Rae Barton](https://rebeccaraebarton.com)
+
+**Live demos:** [rebeccaraebarton.com/work](https://rebeccaraebarton.com/work)
