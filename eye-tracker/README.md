@@ -6,12 +6,15 @@ Animated cartoon eyes that follow your cursor, blink naturally, and include a hi
 
 ## Features
 
-- **Cursor Tracking** - Pupils follow the mouse in real-time with smooth transitions
+- **Cursor Tracking** - Pupils follow mouse, touch, and pen input in real-time with smooth transitions
 - **Natural Blinking** - Randomized blink intervals with configurable timing
 - **4 Eye Shapes** - Almond, Round (Googly), Wide, and Egg
 - **Dizzy Easter Egg** - Hover between the eyes to trigger a dizzy animation
 - **Fully Responsive** - Height-driven sizing that scales proportionally
 - **Highly Customizable** - All colors, sizes, and behaviors configurable via Framer controls
+- **Mobile/Touch Support** - Works with touch screens and stylus input via Pointer Events
+- **Accessibility** - Respects `prefers-reduced-motion` system setting
+- **Memory Safe** - Proper cleanup of all timers and animations on unmount
 
 ## Installation
 
@@ -73,6 +76,14 @@ Hover your cursor in the gap between the eyes for ~1.2 seconds to trigger a dizz
 
 The delay is configurable via the **Dizzy Delay** property.
 
+## Accessibility
+
+The component respects the `prefers-reduced-motion` system setting:
+- When reduced motion is enabled, the dizzy animation is skipped entirely
+- Eyes immediately return to their resting state instead of animating
+
+To test, enable "Reduce Motion" in your system accessibility settings.
+
 ## Technical Notes
 
 ### Responsive Sizing
@@ -84,13 +95,23 @@ The component uses **height-driven sizing**:
 
 ### Performance
 
-- Single consolidated animation state to minimize re-renders
+- Static objects hoisted to module scope to prevent recreation
+- Split state atoms for targeted re-renders
+- Memoized dimension calculations
 - CSS transforms for GPU-accelerated animations
 - Threshold-based resize detection prevents feedback loops
+- No memory leaks - all timeouts properly cleaned up on unmount
+
+### Input Support
+
+Uses Pointer Events API for unified input handling:
+- Mouse cursor tracking
+- Touch input on mobile/tablet
+- Stylus/pen input on supported devices
 
 ### Browser Support
 
-- Modern browsers with ResizeObserver support
+- Modern browsers with ResizeObserver and Pointer Events support
 - Falls back gracefully in SSR environments
 
 ## Customization Examples
@@ -118,6 +139,22 @@ Show Highlight: true
 Eye Color: #FFFFFF
 Border Color: #333333
 ```
+
+## Changelog
+
+### v3.0.0 (2026-01-26)
+- Added touch/pen support via Pointer Events
+- Added `prefers-reduced-motion` accessibility support
+- Fixed memory leak in blink timeout cleanup
+- Improved performance with memoization and split state
+- Fixed stale closure bug in dizzy state detection
+- Smoother dizzy animation (CSS transition disabled during rAF)
+
+### v2.0.0
+- Initial public release
+- Height-driven responsive sizing
+- 4 eye shapes
+- Dizzy easter egg
 
 ## License
 
