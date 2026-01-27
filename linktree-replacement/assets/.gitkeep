@@ -1,0 +1,8 @@
+# Asset Directory
+
+This folder contains:
+- preview.png (main package preview)
+- wizard-screenshots/ (step-by-step documentation images)
+- social-icons/ (SVG fallback icons)
+
+Add your screenshots here after capturing from Framer.

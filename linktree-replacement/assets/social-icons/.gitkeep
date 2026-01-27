@@ -1,0 +1,17 @@
+# Social Icons (SVG)
+
+Fallback social icons if needed.
+The SocialIconLinks component includes built-in SVG icons for:
+- linkedin.svg
+- instagram.svg
+- pinterest.svg
+- tiktok.svg
+- spotify.svg
+- bluesky.svg
+- threads.svg
+- x.svg
+- github.svg
+- youtube.svg
+- email.svg
+
+These are embedded in the component, so separate files are optional.
