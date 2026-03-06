@@ -1,0 +1,32 @@
+name: Lint
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check each package directory has README.md and LICENSE
+        run: |
+          status=0
+          for dir in */; do
+            # Skip hidden directories
+            [[ "$dir" == .* ]] && continue
+
+            if [ ! -f "${dir}README.md" ]; then
+              echo "::error::Missing README.md in ${dir}"
+              status=1
+            fi
+
+            if [ ! -f "${dir}LICENSE" ]; then
+              echo "::error::Missing LICENSE in ${dir}"
+              status=1
+            fi
+          done
+          exit $status
