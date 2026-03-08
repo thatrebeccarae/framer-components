@@ -4,12 +4,12 @@
 
 **Open-source code components and packages for Framer — built for designers who ship.**
 
-[![GitHub stars](https://img.shields.io/github/stars/thatrebeccarae/framer-components?style=for-the-badge&logo=github&color=181717)](https://github.com/thatrebeccarae/framer-components/stargazers)
-[![License](https://img.shields.io/badge/License-MIT-0A66C2?style=for-the-badge)](LICENSE)
 [![Framer](https://img.shields.io/badge/Framer-Components-0055FF?style=for-the-badge&logo=framer&logoColor=white)](https://framer.com)
 [![Website](https://img.shields.io/badge/rebeccaraebarton.com-1C1C1C?style=for-the-badge&logo=google-chrome&logoColor=white)](https://rebeccaraebarton.com)
+[![GitHub stars](https://img.shields.io/github/stars/thatrebeccarae/framer-components?style=for-the-badge&logo=github&color=181717)](https://github.com/thatrebeccarae/framer-components/stargazers)
+[![License](https://img.shields.io/badge/License-MIT-0A66C2?style=for-the-badge)](LICENSE)
 
-[Packages](#packages) · [LinkTree Replacement](#linktree-replacement) · [Eye Tracker](#eye-tracker) · [Installation](#installation) · [License](#license)
+[Packages](#packages) · [LinkTree Replacement](#linktree-replacement) · [Eye Tracker](#eye-tracker) · [Getting Started](#getting-started) · [License](#license)
 
 </div>
 
@@ -57,7 +57,7 @@ Animated eyes that follow your cursor around the page — with blinking and hidd
 
 [Get Started →](./eye-tracker)
 
-## Installation
+## Getting Started
 
 Each package has its own installation instructions. Generally:
 
