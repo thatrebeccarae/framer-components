@@ -1,26 +1,20 @@
-// CMS Item Counter - Counts items from a Substack feed or CMS collection
+// Substack Item Counter — displays the total number of posts in a Substack
+// archive via a companion Cloudflare Worker proxy with a /count endpoint.
 //
-// SUBSTACK MODE (recommended):
+// Setup:
 // 1. Add this component to your page
 // 2. Set the "Proxy URL" to your Cloudflare Worker URL
 // 3. Optionally set section/exclude filters (same as SubstackFeed)
 // 4. The count updates automatically when new posts are published
 //    (uses /count endpoint which paginates the full archive)
-//
-// DOM MODE (legacy):
-// 1. Select your CMS List component on the canvas
-// 2. Give it a unique name (data-framer-name attribute)
-// 3. Enter that name in "Collection ID"
 
 import { addPropertyControls, ControlType, RenderTarget } from "framer"
 import { useEffect, useState, startTransition, useMemo } from "react"
 
-interface CMSItemCounterProps {
-    mode: "substack" | "dom"
+interface SubstackItemCounterProps {
     proxyUrl: string
     section: string
     excludeSections: string
-    collectionId: string
     prefix: string
     suffix: string
     fontColor: string
@@ -34,17 +28,15 @@ function formatNumber(num: number): string {
 }
 
 /**
- * @framerDisplayName CMS Item Counter
+ * @framerDisplayName Substack Item Counter
  * @framerSupportedLayoutWidth auto
  * @framerSupportedLayoutHeight auto
  */
-export default function CMSItemCounter(props: CMSItemCounterProps) {
+export default function SubstackItemCounter(props: SubstackItemCounterProps) {
     const {
-        mode = "substack",
         proxyUrl = "",
         section = "",
         excludeSections = "",
-        collectionId = "",
         prefix = "",
         suffix = "",
         fontColor = "#000000",
@@ -55,9 +47,7 @@ export default function CMSItemCounter(props: CMSItemCounterProps) {
     const [count, setCount] = useState(0)
     const isCanvas = RenderTarget.current() === RenderTarget.canvas
 
-    // Substack mode: fetch /count endpoint (paginates full archive server-side)
     useEffect(() => {
-        if (mode !== "substack") return
         if (isCanvas) {
             setCount(6)
             return
@@ -81,47 +71,13 @@ export default function CMSItemCounter(props: CMSItemCounterProps) {
                     startTransition(() => setCount(n))
                 }
             } catch (e) {
-                console.error("CMS Counter: Substack fetch error", e)
+                console.error("Substack Item Counter: fetch error", e)
                 if (!cancelled) startTransition(() => setCount(0))
             }
         }
         fetchCount()
         return () => { cancelled = true }
-    }, [mode, proxyUrl, section, excludeSections, isCanvas])
-
-    // DOM mode: count elements in DOM (legacy)
-    useEffect(() => {
-        if (mode !== "dom") return
-        if (isCanvas) {
-            setCount(12)
-            return
-        }
-        if (!collectionId) return
-
-        const countItems = () => {
-            let container: Element | null = null
-            container = document.querySelector(`[data-framer-name="${collectionId}"]`)
-            if (!container) container = document.querySelector(`[aria-label="${collectionId}"]`)
-            if (!container) container = document.getElementById(collectionId)
-
-            if (container) {
-                const itemsContainer = container.querySelector('[data-framer-component-type="CMSCollectionListItems"]')
-                const target = itemsContainer || container
-                startTransition(() => setCount(target.children.length))
-            } else {
-                startTransition(() => setCount(0))
-            }
-        }
-
-        const timeout = setTimeout(countItems, 100)
-        const observer = new MutationObserver(countItems)
-        observer.observe(document.body, { childList: true, subtree: true })
-
-        return () => {
-            clearTimeout(timeout)
-            observer.disconnect()
-        }
-    }, [mode, collectionId, isCanvas])
+    }, [proxyUrl, section, excludeSections, isCanvas])
 
     const formattedCount = useMemo(() => formatNumber(count), [count])
 
@@ -159,42 +115,24 @@ export default function CMSItemCounter(props: CMSItemCounterProps) {
     )
 }
 
-addPropertyControls(CMSItemCounter, {
-    mode: {
-        type: ControlType.Enum,
-        title: "Mode",
-        options: ["substack", "dom"],
-        optionTitles: ["Substack Feed", "DOM Count"],
-        defaultValue: "substack",
-        displaySegmentedControl: true,
-    },
+addPropertyControls(SubstackItemCounter, {
     proxyUrl: {
         type: ControlType.String,
         title: "Proxy URL",
         defaultValue: "",
         description: "Your Cloudflare Worker URL (e.g. https://substack-proxy.example.workers.dev)",
-        hidden: (props) => props.mode !== "substack",
     },
     section: {
         type: ControlType.String,
         title: "Section",
         defaultValue: "",
         description: "Only count posts from this section slug",
-        hidden: (props) => props.mode !== "substack",
     },
     excludeSections: {
         type: ControlType.String,
         title: "Exclude Sections",
         defaultValue: "",
-        description: "Comma-separated section slugs to exclude (e.g. newsletter)",
-        hidden: (props) => props.mode !== "substack",
-    },
-    collectionId: {
-        type: ControlType.String,
-        title: "Collection ID",
-        description: "data-framer-name of your CMS List",
-        placeholder: "my-collection",
-        hidden: (props) => props.mode !== "dom",
+        description: "Comma-separated section slugs to exclude",
     },
     prefix: {
         type: ControlType.String,
