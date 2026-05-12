@@ -1,4 +1,4 @@
-// EyeTracker - Cartoon eyes that follow cursor, blink, and have dizzy easter egg
+// EyeTrackerV3 - Cartoon eyes that follow cursor, blink, and have dizzy easter egg
 // Height-driven sizing with ResizeObserver (height-only, with threshold to prevent loops)
 
 import { useEffect, useState, useRef, useMemo, type CSSProperties } from "react"
@@ -14,7 +14,7 @@ const EYE_SHAPE_STYLES: Record<string, string> = {
     egg: "50% 50% 50% 50% / 65% 65% 35% 35%",
 } as const
 
-interface EyeTrackerProps {
+interface EyeTrackerV3Props {
     /**
      * Background color of the eye sclera
      * @default "#FFFFFF"
@@ -133,7 +133,7 @@ interface EyeTrackerProps {
 }
 
 /**
- * EyeTracker - Animated Eye Tracker
+ * EyeTrackerV3 - Animated Eye Tracker
  *
  * @framerDisableUnlink
  * @framerIntrinsicWidth 188
@@ -142,7 +142,7 @@ interface EyeTrackerProps {
  * @framerSupportedLayoutWidth fixed
  * @framerSupportedLayoutHeight any
  */
-export default function EyeTracker(props: EyeTrackerProps) {
+export default function EyeTrackerV3(props: EyeTrackerV3Props) {
     const {
         eyeColor = "#FFFFFF",
         pupilColor = "#000000",
@@ -573,7 +573,7 @@ export default function EyeTracker(props: EyeTrackerProps) {
     )
 }
 
-addPropertyControls(EyeTracker, {
+addPropertyControls(EyeTrackerV3, {
     eyeColor: { type: ControlType.Color, title: "Eye Color", defaultValue: "#FFFFFF" },
     pupilColor: { type: ControlType.Color, title: "Pupil Color", defaultValue: "#000000" },
     borderColor: { type: ControlType.Color, title: "Border Color", defaultValue: "#000000" },
