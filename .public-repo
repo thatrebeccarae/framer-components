@@ -1,0 +1,5 @@
+# Marker file: this repo is PUBLIC.
+#
+# The global pre-commit hook at ~/.git-hooks/ treats any repo with this marker
+# (or "public" in the remote URL) as public, applying stricter PII/secret scans
+# and commit-message audits. See ~/.claude/CLAUDE.md "GitHub Hygiene" section.

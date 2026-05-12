@@ -1,0 +1,28 @@
+# Patterns / files exempt from PII scanning in this PUBLIC repo.
+# One regex or file path per line; lines starting with # are ignored.
+#
+# Author attribution is INTENTIONAL here — Rebecca Rae Barton is the named
+# author of every package, with website rebeccaraebarton.com and GitHub
+# handle thatrebeccarae. These appear in author lines, LICENSE files, and
+# README cross-links throughout the repo.
+
+# README and LICENSE files legitimately reference the author
+README.md
+LICENSE
+CONTRIBUTING.md
+SECURITY.md
+CODE_OF_CONDUCT.md
+
+# Per-package READMEs and LICENSE files (same attribution)
+*/README.md
+*/LICENSE
+*/PRIVACY.md
+*/docs/*.md
+
+# Issue and PR templates
+.github/
+
+# This file itself documents patterns it exempts
+.pii-allowlist
+.public-repo
+.commit-msg-blocklist

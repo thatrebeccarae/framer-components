@@ -1,0 +1,30 @@
+# Terms that must never appear in commit messages in this PUBLIC repo.
+# One term per line; lines starting with # are ignored.
+
+# Client names (per global hygiene config)
+dagne-dover
+digital-trax
+youmail
+supply-clinic
+
+# Personal infrastructure
+TARS
+skynet
+tailscale
+Popoloto
+Repos.nosync
+
+# Device IDs and hostnames
+FVQFBFV
+VRIGWPI
+
+# Internal codenames / private repo references
+rrb-framer
+aouda-dev
+claude-marketing-dev
+
+# Vague placeholder commits
+^wip$
+^fix$
+^update$
+^test$
