@@ -1,5 +1,8 @@
 # Terms that must never appear in commit messages in this PUBLIC repo.
-# One term per line; lines starting with # are ignored.
+# One regex per line; lines starting with # are ignored.
+# Patterns are evaluated case-insensitively as ERE (`grep -niE`).
+# Use \b word boundaries on short tokens to avoid false positives
+# (e.g. bare TARS would match "Stars" without boundaries).
 
 # Client names (per global hygiene config)
 dagne-dover
@@ -8,20 +11,20 @@ youmail
 supply-clinic
 
 # Personal infrastructure
-TARS
-skynet
-tailscale
-Popoloto
-Repos.nosync
+\bTARS\b
+\bskynet\b
+\btailscale\b
+\bPopoloto\b
+\bRepos\.nosync\b
 
 # Device IDs and hostnames
-FVQFBFV
-VRIGWPI
+\bFVQFBFV\b
+\bVRIGWPI\b
 
 # Internal codenames / private repo references
-rrb-framer
-aouda-dev
-claude-marketing-dev
+\brrb-framer\b
+\baouda-dev\b
+\bclaude-marketing-dev\b
 
 # Vague placeholder commits
 ^wip$
