@@ -16,8 +16,9 @@ jobs:
         run: |
           status=0
           for dir in */; do
-            # Skip hidden directories
+            # Skip hidden directories and meta-resource directories
             [[ "$dir" == .* ]] && continue
+            [[ "$dir" == "assets/" ]] && continue
 
             if [ ! -f "${dir}README.md" ]; then
               echo "::error::Missing README.md in ${dir}"
