@@ -4,9 +4,9 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) at the repo level (each package is copy-paste, not versioned independently).
 
-## [1.0.0] — 2026-05-14
+## [4.0.0] — 2026-05-14
 
-First tagged release. Six packages ship as production-ready, with full per-package documentation, governance docs, and cross-promotion across the ecosystem.
+First tagged release of the post-restructure repo (prior tags v1.0.0 and v3.0.0 predate the May 2026 reorganization into per-package directories with full governance). Six packages ship as production-ready, with full per-package documentation, governance docs, and cross-promotion across the ecosystem.
 
 ### Packages
 
@@ -27,4 +27,4 @@ First tagged release. Six packages ship as production-ready, with full per-packa
 - Lint workflow enforcing README+LICENSE in every top-level package dir
 - GitHub repo: secret scanning, push protection, Dependabot enabled
 
-[1.0.0]: https://github.com/thatrebeccarae/framer-components/releases/tag/v1.0.0
+[4.0.0]: https://github.com/thatrebeccarae/framer-components/releases/tag/v4.0.0
