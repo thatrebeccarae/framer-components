@@ -103,13 +103,25 @@ Framer sites are Single Page Applications (SPA), which requires special handling
 - Enhanced Measurement for outbound clicks
 - Known Framer analytics limitations
 
+## Related packages
+
+- [**music-pill**](../music-pill) — Live Now-Playing Spotify card; pairs well with a link-in-bio page
+- [**fluid-typography**](../fluid-typography) — Drop-in fluid heading scale, no media queries
+- [**eye-tracker**](../eye-tracker) — Animated eyes that follow the cursor (also bundled here as an optional component)
+
+[See all packages →](../)
+
 ## License
 
 MIT License - see [LICENSE](LICENSE)
 
-## Author
+## About the author
 
-[Rebecca Rae Barton](https://rebeccaraebarton.com)
+By [Rebecca Rae Barton](https://rebeccaraebarton.com). I run a marketing-and-engineering practice; most of these components were extracted from client work where the same patterns kept showing up.
+
+**Follow:** [Substack](https://dgtldept.substack.com) · [LinkedIn](https://linkedin.com/in/rebeccaraebarton) · [X](https://x.com/rebeccarae) · [Live demos](https://rebeccaraebarton.com/work)
+
+**Other open-source:** [claude-marketing](https://github.com/thatrebeccarae/claude-marketing) (56 Claude Code skills for marketing teams) · [substack-aeo-proxy](https://github.com/dgtldept/substack-aeo-proxy) (free Vercel proxy for Substack AEO)
 
 ---
 

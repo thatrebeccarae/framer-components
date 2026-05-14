@@ -33,10 +33,22 @@ Polling happens client-side against **your own** Cloudflare Worker. No third-par
 - [Spotify proxy setup](docs/spotify-proxy-setup.md) — Worker contract, OAuth setup, deployment
 - [PRIVACY.md](PRIVACY.md) — what data flows where
 
+## Related packages
+
+- [**linktree-replacement**](../linktree-replacement) — Privacy-first link-in-bio page; the Music Pill drops in naturally as a "what I'm listening to" block
+- [**substack-integration**](../substack-integration) — Substack feed + post counter, also Worker-backed
+- [**eye-tracker**](../eye-tracker) — Animated cursor-following eyes for personality
+
+[See all packages →](../)
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
 
-## Author
+## About the author
 
-[Rebecca Rae Barton](https://rebeccaraebarton.com) · [framer-components](https://github.com/thatrebeccarae/framer-components)
+By [Rebecca Rae Barton](https://rebeccaraebarton.com). I run a marketing-and-engineering practice; this component started as the "now playing" widget on my own site.
+
+**Follow:** [Substack](https://dgtldept.substack.com) · [LinkedIn](https://linkedin.com/in/rebeccaraebarton) · [X](https://x.com/rebeccarae) · [Live demos](https://rebeccaraebarton.com/work)
+
+**Other open-source:** [claude-marketing](https://github.com/thatrebeccarae/claude-marketing) (56 Claude Code skills for marketing teams) · [substack-aeo-proxy](https://github.com/dgtldept/substack-aeo-proxy) (free Vercel proxy for Substack AEO) · [framer-components](https://github.com/thatrebeccarae/framer-components) (this repo)

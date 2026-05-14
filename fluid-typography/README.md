@@ -44,10 +44,22 @@ To override a heading size, add your own CSS via Framers Custom Code section or 
 h1 { --min: 32; --base: 96; }
 ```
 
+## Related packages
+
+- [**linktree-replacement**](../linktree-replacement) — Privacy-first link-in-bio page; benefits from fluid headings on small screens
+- [**substack-integration**](../substack-integration) — Substack feed components, also editorial-typography-friendly
+- [**eye-tracker**](../eye-tracker) and [**rolling-card-stack**](../rolling-card-stack) — Other zero-dependency single-file components
+
+[See all packages →](../)
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
 
-## Author
+## About the author
 
-[Rebecca Rae Barton](https://rebeccaraebarton.com) · [framer-components](https://github.com/thatrebeccarae/framer-components)
+By [Rebecca Rae Barton](https://rebeccaraebarton.com). I run a marketing-and-engineering practice; this stylesheet is the one I copy into every editorial Framer site I build.
+
+**Follow:** [Substack](https://dgtldept.substack.com) · [LinkedIn](https://linkedin.com/in/rebeccaraebarton) · [X](https://x.com/rebeccarae) · [Live demos](https://rebeccaraebarton.com/work)
+
+**Other open-source:** [claude-marketing](https://github.com/thatrebeccarae/claude-marketing) (56 Claude Code skills for marketing teams) · [substack-aeo-proxy](https://github.com/dgtldept/substack-aeo-proxy) (free Vercel proxy for Substack AEO) · [framer-components](https://github.com/thatrebeccarae/framer-components) (this repo)

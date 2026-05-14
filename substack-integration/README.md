@@ -39,10 +39,24 @@ These components fetch directly from your own Cloudflare Worker. No third-party 
 - [Worker setup guide](docs/worker-setup.md) — endpoint contract, reference implementation
 - [PRIVACY.md](PRIVACY.md) — what data flows where
 
+## Related packages
+
+If you're building a Substack-powered site:
+
+- [**substack-aeo-proxy**](https://github.com/dgtldept/substack-aeo-proxy) — Free Vercel proxy that injects JSON-LD structured data into Substack pages so AI crawlers (ChatGPT, Claude, Perplexity, Gemini) can see your professional identity. Pairs naturally with the components in this package.
+- [**linktree-replacement**](../linktree-replacement) — Privacy-first link-in-bio page; common companion to a Substack site
+- [**fluid-typography**](../fluid-typography) — Drop-in fluid heading scale for editorial layouts
+
+[See all packages →](../)
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
 
-## Author
+## About the author
 
-[Rebecca Rae Barton](https://rebeccaraebarton.com) · [framer-components](https://github.com/thatrebeccarae/framer-components)
+By [Rebecca Rae Barton](https://rebeccaraebarton.com). I write [dgtl dept](https://dgtldept.substack.com) — essays at the intersection of marketing and engineering — and these components started as the embeds I needed for my own site.
+
+**Follow:** [Substack](https://dgtldept.substack.com) · [LinkedIn](https://linkedin.com/in/rebeccaraebarton) · [X](https://x.com/rebeccarae) · [Live demos](https://rebeccaraebarton.com/work)
+
+**Other open-source:** [claude-marketing](https://github.com/thatrebeccarae/claude-marketing) (56 Claude Code skills for marketing teams) · [framer-components](https://github.com/thatrebeccarae/framer-components) (this repo)

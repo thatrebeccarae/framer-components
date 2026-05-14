@@ -1,13 +1,21 @@
 <div align="center">
 
+<img src="assets/framer-components-hero.png" alt="framer-components — open-source code components and packages for Framer" width="100%">
+
+<br>
+<br>
+
 # Framer Components
 
 **Open-source code components and packages for Framer — built for designers who ship.**
 
 [![Framer](https://img.shields.io/badge/Framer-Components-0055FF?style=for-the-badge&logo=framer&logoColor=white)](https://framer.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Rebecca%20Rae%20Barton-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/rebeccaraebarton)
+[![X](https://img.shields.io/badge/X-@rebeccarae-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/rebeccarae)
+[![Substack](https://img.shields.io/badge/Substack-dgtl%20dept-FF6719?style=for-the-badge&logo=substack&logoColor=white)](https://dgtldept.substack.com)
 [![Website](https://img.shields.io/badge/rebeccaraebarton.com-1C1C1C?style=for-the-badge&logo=google-chrome&logoColor=white)](https://rebeccaraebarton.com)
 [![GitHub stars](https://img.shields.io/github/stars/thatrebeccarae/framer-components?style=for-the-badge&logo=github&color=181717)](https://github.com/thatrebeccarae/framer-components/stargazers)
-[![License](https://img.shields.io/badge/License-MIT-0A66C2?style=for-the-badge)](LICENSE)
+[![License](https://img.shields.io/badge/License-MIT-353535?style=for-the-badge)](LICENSE)
 
 <br>
 
@@ -17,7 +25,7 @@ git clone https://github.com/thatrebeccarae/framer-components.git
 
 <br>
 
-[Why I Built This](#why-i-built-this) · [Who This Is For](#who-this-is-for) · [Packages](#packages) · [Getting Started](#getting-started) · [Contributing](#contributing) · [License](#license)
+[Why I Built This](#why-i-built-this) · [Who This Is For](#who-this-is-for) · [Packages](#packages) · [Getting Started](#getting-started) · [Roadmap](ROADMAP.md) · [Related Repos](#related-repos) · [Contributing](#contributing) · [License](#license)
 
 </div>
 
@@ -68,13 +76,16 @@ Each package has its own installation instructions in its README. Generally:
 
 </details>
 
-## Whats Coming
+## Related Repos
 
-Future packages in the works (see [issues](https://github.com/thatrebeccarae/framer-components/issues) to follow along):
+Other open-source work in the same orbit:
 
-- **Micrographics suite** — `<LabelValue>`, `<DataGrid>`, `<CapsuleBadge>`, `<MicroMark>` for structured-data-as-design layouts
-- **Scroll-driven animations** — `<ScrollReveal>`, `<ParallaxLayer>`, stagger systems
-- **Kinetic typography** — `<TextReveal>`, `<MarqueeText>`, `<CountUp>`
+| Repo | What it is |
+|------|------------|
+| [**claude-marketing**](https://github.com/thatrebeccarae/claude-marketing) | 56 open-source Claude Code skills, agents, and workflows for marketing teams. Paid media, e-commerce, content, strategy, creative, and reporting. |
+| [**substack-aeo-proxy**](https://github.com/dgtldept/substack-aeo-proxy) | Free Vercel proxy that injects JSON-LD structured data into Substack pages so AI crawlers (ChatGPT, Claude, Perplexity, Gemini) see your professional identity. |
+
+If you build a Substack site in Framer, the natural stack is: **substack-integration** (this repo) for the feed UI, plus **substack-aeo-proxy** for AEO discoverability.
 
 ## Contributing
 
@@ -90,10 +101,21 @@ MIT — see [LICENSE](LICENSE) for details. Each package also ships a copy of th
 
 ---
 
+## About the author
+
+I'm [Rebecca Rae Barton](https://rebeccaraebarton.com) — I run a marketing-and-engineering practice that ships product, content, and infrastructure for technical brands. Most of these components were extracted from client work where the same patterns kept showing up. Open-sourcing them is cheaper than rebuilding them in slightly different ways forever.
+
+If any of this is useful to you, the easiest ways to follow what I'm building next:
+
+- **Essays on marketing × engineering:** [dgtldept.substack.com](https://dgtldept.substack.com)
+- **LinkedIn:** [linkedin.com/in/rebeccaraebarton](https://linkedin.com/in/rebeccaraebarton)
+- **X:** [@rebeccarae](https://x.com/rebeccarae)
+- **Live demos of these components in production:** [rebeccaraebarton.com/work](https://rebeccaraebarton.com/work)
+
 <div align="center">
 
-**Built by [Rebecca Rae Barton](https://rebeccaraebarton.com)**
+*Please don't be a jerk and steal my work.*
 
-[Live demos](https://rebeccaraebarton.com/work) · [GitHub](https://github.com/thatrebeccarae/framer-components)
+[GitHub](https://github.com/thatrebeccarae/framer-components) · [Substack](https://dgtldept.substack.com) · [LinkedIn](https://linkedin.com/in/rebeccaraebarton) · [+ more](https://rebeccaraebarton.com/work)
 
 </div>
